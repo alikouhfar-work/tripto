@@ -1,7 +1,9 @@
+'use client'
+
 import { useMutation } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
-import { deleteDocument } from '../api/mutations';
 import { DeleteDocumentParams } from '../types';
+import { deleteDocument } from '../api/deleteDocument';
 
 export const useDeleteDocument = () => {
   return useMutation({

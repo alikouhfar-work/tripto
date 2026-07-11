@@ -136,14 +136,20 @@ export const DataTable = <T extends { id: string }>({
       />
 
       <div className="overflow-hidden rounded-xl border">
-        <Table className="bg-white">
+        <Table className="bg-white dark:bg-zinc-900">
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id} className="bg-slate-100 hover:bg-slate-100">
+              <TableRow
+                key={headerGroup.id}
+                className="bg-zinc-100 hover:bg-zinc-100 dark:bg-zinc-950/70 dark:hover:bg-zinc-950/70"
+              >
                 {headerGroup.headers.map((header, index) => (
                   <TableHead
                     key={header.id}
-                    className={clsx('border-zinc-200', index !== 0 ? 'border-l' : '')}
+                    className={clsx(
+                      'border-zinc-200 dark:border-zinc-700',
+                      index !== 0 ? 'border-l' : '',
+                    )}
                     style={{ width: header.getSize() }}
                   >
                     {header.isPlaceholder

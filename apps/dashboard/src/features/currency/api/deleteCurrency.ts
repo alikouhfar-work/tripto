@@ -1,5 +1,4 @@
 import { CURRENCY_ERRORS } from '@/features/currency/constants';
-import { CurrencyFormData } from '@/features/currency/types';
 
 export const deleteCurrency = async (id: string) => {
   const response = await fetch(`/api/currencies/${id}`, {

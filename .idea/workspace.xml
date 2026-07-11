@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da1dc53c-5f04-449d-8c1a-e47dfc7e8f12" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/src/components/shared/Header/ToggleThemeButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/src/components/shared/ModificationForm/ModificationFormHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/src/components/shared/ModificationForm/ModificationFormTitle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/src/components/shared/ModificationForm/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/src/contexts/ThemeContext.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/src/providers/ThemeProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/enums/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/enums/src/enums/season.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/enums/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/types/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/types/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/types/src/types/address.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/types/src/types/currency.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/types/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/client/src/features/document/components/ImagePreview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/client/src/features/document/components/ImagePreview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/client/src/features/document/components/ImagePreviewWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/client/src/features/document/components/ImagePreviewWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/client/src/features/document/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/client/src/features/document/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/client/src/features/document/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/client/src/features/document/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/app/api/accommodations/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/app/api/accommodations/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/app/api/activities/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/app/api/activities/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/app/api/activity-types/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/app/api/activity-types/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/app/api/currencies/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/app/api/currencies/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/app/api/destinations/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/app/api/destinations/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/components/shared/DataTable/DataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/components/shared/DataTable/DataTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/components/shared/DataTable/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/components/shared/DataTable/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/accommodation-tag/api/createAccommodationTag.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/accommodation-tag/api/createAccommodationTag.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/accommodation-tag/api/getAccommodationTag.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/accommodation-tag/api/getAccommodationTag.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/accommodation-tag/api/getAccommodationTagsDropdown.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/accommodation-tag/api/getAccommodationTagsDropdown.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/accommodation/api/getAccommodations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/accommodation/api/getAccommodations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/accommodation/hotel/api/createHotel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/accommodation/hotel/api/createHotel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/accommodation/house/api/createHouse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/accommodation/house/api/createHouse.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/activity-type/api/deleteActivityType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/activity-type/api/deleteActivityType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/activity-type/api/getActivityType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/activity-type/api/getActivityType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/activity-type/api/getActivityTypesDropdown.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/activity-type/api/getActivityTypesDropdown.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/activity-type/api/updateActivityType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/activity-type/api/updateActivityType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/activity/api/createActivity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/activity/api/createActivity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/activity/api/deleteActivity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/activity/api/deleteActivity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/activity/api/getActivity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/activity/api/getActivity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/authentication/api/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/authentication/api/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/authentication/api/loginWithGoogle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/authentication/api/loginWithGoogle.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/currency/api/deleteCurrency.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/currency/api/deleteCurrency.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/currency/api/getCurrenciesDropdown.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/currency/api/getCurrenciesDropdown.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/currency/api/getCurrency.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/currency/api/getCurrency.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/currency/api/updateCurrency.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/currency/api/updateCurrency.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/destination/api/getDestination.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/destination/api/getDestination.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/destination/api/updateDestination.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/destination/api/updateDestination.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/document/components/ImagePreview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/document/components/ImagePreview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/document/components/ImagePreviewWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/document/components/ImagePreviewWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/document/components/ImagesPreviewWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/document/components/ImagesPreviewWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/document/components/ImagesPreviewWrapperSkeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/document/components/ImagesPreviewWrapperSkeleton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/document/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/document/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/features/document/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/features/document/types/document.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/utils/apiClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/utils/apiClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/src/utils/serverFetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/src/utils/serverFetch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/database/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/database/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/database/src/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/database/src/client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/database/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/database/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/src/api/deleteDocument.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/src/api/deleteDocument.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/src/api/getDocument.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/src/api/getDocument.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/src/api/getDocuments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/src/api/getDocuments.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/src/api/listKeysByPrefix.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/src/api/listKeysByPrefix.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/src/api/uploadDocument.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/src/api/uploadDocument.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/src/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/src/hooks/useDeleteDocument.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/src/hooks/useDeleteDocument.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/src/hooks/useGetDocument.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/src/hooks/useGetDocument.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/src/hooks/useGetDocuments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/src/hooks/useGetDocuments.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/src/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documents/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/documents/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/eslint-config/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/eslint-config/base.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/eslint-config/next.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/eslint-config/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/eslint-config/react-internal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/storage/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/storage/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/storage/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/storage/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/storage/src/providers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/storage/src/providers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/storage/src/providers/minio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/storage/src/providers/minio.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/storage/src/providers/s3.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/storage/src/providers/s3.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/storage/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/storage/src/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/typescript-config/base.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/enums/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/typescript-config/nextjs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/typescript-config/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/typescript-config/react-library.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/turbo.json" beforeDir="false" afterPath="$PROJECT_DIR$/turbo.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000025167616096" />
+      <entry key="MS500" value="1.0758871802746905" />
+      <entry key="S2" value="1.5248583418115575" />
+      <entry key="S5" value="1.772714107899696" />
+      <entry key="S10" value="1.880925929666259" />
+      <entry key="S30" value="2.0865941475439795" />
+      <entry key="S60" value="2.436602732031509" />
+      <entry key="M2" value="3.1647548582839526" />
+      <entry key="M5" value="5.154901776670417" />
+      <entry key="M10" value="10.004420495631752" />
+      <entry key="M15" value="16.48791287031652" />
+      <entry key="M30" value="34.52965691427479" />
+      <entry key="H1" value="62.731431018151916" />
+      <entry key="H2" value="112.96049534579214" />
+      <entry key="H4" value="178.49185037300515" />
+      <entry key="D1" value="369.99918721085555" />
+      <entry key="W1" value="502.56914055693693" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="6.152654768441456E-11" />
+      <entry key="MS500" value="0.009074286968169702" />
+      <entry key="S2" value="0.30864065172338456" />
+      <entry key="S5" value="0.6248578798821262" />
+      <entry key="S10" value="0.7904796845479138" />
+      <entry key="S30" value="0.9401809831894045" />
+      <entry key="S60" value="1.261503538092505" />
+      <entry key="M2" value="2.6669044477895394" />
+      <entry key="M5" value="7.448285764754306" />
+      <entry key="M10" value="14.970831323788806" />
+      <entry key="M15" value="23.22484750707147" />
+      <entry key="M30" value="44.94944290007556" />
+      <entry key="H1" value="74.44989658934861" />
+      <entry key="H2" value="115.49944421794949" />
+      <entry key="H4" value="163.1360065939064" />
+      <entry key="D1" value="318.57994998013913" />
+      <entry key="W1" value="436.8174752393019" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.0719343950425441E-5" />
+      <entry key="MS500" value="0.12625276361233095" />
+      <entry key="S2" value="1.1918974094251211" />
+      <entry key="S5" value="2.046313214421516" />
+      <entry key="S10" value="2.473876196357361" />
+      <entry key="S30" value="2.9536225433250762" />
+      <entry key="S60" value="3.655399355180531" />
+      <entry key="M2" value="5.799753276915147" />
+      <entry key="M5" value="12.577172629193113" />
+      <entry key="M10" value="24.949682473114617" />
+      <entry key="M15" value="39.685084304141505" />
+      <entry key="M30" value="79.44991398115779" />
+      <entry key="H1" value="137.15471789314597" />
+      <entry key="H2" value="228.4369293623923" />
+      <entry key="H4" value="341.61048700256424" />
+      <entry key="D1" value="688.5737432481051" />
+      <entry key="W1" value="939.3856195074258" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="3GGlnwqvhnvK0k8naQUOxI9xrv4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/alikouhfar/Desktop/Projects/Personal/tripto/apps/dashboard/src/components/shared/ModificationForm",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/alikouhfar/Desktop/Projects/Personal/tripto/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/dashboard/src/components/shared/ModificationForm" />
+      <recent name="$PROJECT_DIR$/apps/dashboard/src/components/shared" />
+      <recent name="$PROJECT_DIR$/apps/dashboard/src/components/shared/ModificationFormSection" />
+      <recent name="$PROJECT_DIR$/packages/icons/src" />
+      <recent name="$PROJECT_DIR$/packages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/assets" />
+      <recent name="$PROJECT_DIR$/packages/enums/src/enums" />
+      <recent name="$PROJECT_DIR$/apps/dashboard/src/features/user/profile/types" />
+      <recent name="$PROJECT_DIR$/apps/dashboard/src/features/document/types" />
+      <recent name="$PROJECT_DIR$/apps/dashboard/src/features/destination/types" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.24374.125" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da1dc53c-5f04-449d-8c1a-e47dfc7e8f12" name="Changes" comment="" />
+      <created>1783605956542</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1783605956542</updated>
+      <workItem from="1783605957567" duration="19869000" />
+      <workItem from="1783669955776" duration="4458000" />
+      <workItem from="1783675518888" duration="20960000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

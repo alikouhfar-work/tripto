@@ -1,0 +1,126 @@
+import { ButtonPrimary } from '@/components/shared/ButtonPrimary';
+import { DynamicIcon } from '@/components/shared/DynamicIcon';
+import { FieldWithError } from '@/components/shared/FieldWithError';
+import { Input } from '@/components/ui/input';
+import { InputGroup, InputGroupAddon, InputGroupInput } from '@/components/ui/input-group';
+import { Textarea } from '@/components/ui/textarea';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { FC, useEffect } from 'react';
+import { Controller, useForm, useWatch } from 'react-hook-form';
+import { AccommodationPolicyFormProps } from '@/features/accommodation/types/accommodationPolicy';
+import { policySchema, PolicySchema } from '@/features/accommodation/schema/policy';
+
+export const AccommodationPolicyForm: FC<AccommodationPolicyFormProps> = (props) => {
+  const { currentItem, closeHandler, createHandler, updateHandler } = props;
+  const {
+    reset,
+    control,
+    formState: { errors, isDirty, isValid },
+  } = useForm<PolicySchema>({
+    mode: 'onChange',
+    resolver: zodResolver(policySchema),
+    defaultValues: {
+      icon: '',
+      title: '',
+      description: '',
+    },
+  });
+
+  const [title, icon, description] = useWatch({ control, name: ['title', 'icon', 'description'] });
+
+  const onReset = () => reset({ icon: '', title: '', description: '' });
+
+  const onClose = () => {
+    onReset();
+    closeHandler();
+  };
+
+  const onModify = () => {
+    if (icon && title) {
+      onClose();
+      currentItem.index !== undefined
+        ? updateHandler(currentItem.index, { icon, title, description })
+        : createHandler({ icon, title, description });
+    }
+  };
+
+  useEffect(() => {
+    currentItem.policy && reset(currentItem.policy);
+  }, [currentItem.policy]);
+
+  return (
+    <div className="animate-in fade-in slide-in-from-top-2 relative grid grid-cols-1 gap-x-4 rounded-2xl border border-zinc-200/60 bg-zinc-50/50 p-5 shadow-inner duration-200 sm:grid-cols-2 lg:grid-cols-1">
+      <FieldWithError required htmlFor="policy-title" label="Title" error={errors.title?.message}>
+        <Controller
+          name="title"
+          control={control}
+          render={({ field }) => (
+            <Input
+              {...field}
+              id="policy-title"
+              className="bg-white"
+              placeholder="Enter a title"
+              aria-invalid={!!errors.title?.message}
+            />
+          )}
+        />
+      </FieldWithError>
+
+      <FieldWithError required htmlFor="policy-icon" label="Icon" error={errors.icon?.message}>
+        <Controller
+          name="icon"
+          control={control}
+          render={({ field }) => (
+            <InputGroup className="bg-white">
+              <InputGroupInput
+                {...field}
+                id="policy-icon"
+                placeholder="Enter a Tabler Icon name"
+                aria-invalid={!!errors.icon?.message}
+              />
+              <InputGroupAddon>
+                <DynamicIcon name={field.value} className="text-zinc-600" />
+              </InputGroupAddon>
+            </InputGroup>
+          )}
+        />
+      </FieldWithError>
+
+      <FieldWithError
+        required
+        label="Description"
+        htmlFor="policy-description"
+        className="sm:col-span-2 lg:col-span-1"
+        error={errors.description?.message}
+      >
+        <Controller
+          name="description"
+          control={control}
+          render={({ field }) => (
+            <Textarea
+              {...field}
+              id="policy-description"
+              className="bg-white"
+              placeholder="Enter a description"
+              aria-invalid={!!errors.title?.message}
+            />
+          )}
+        />
+      </FieldWithError>
+
+      <div className="flex items-center gap-2">
+        <ButtonPrimary type="button" color="red" tone="outline" onClick={onClose}>
+          Close
+        </ButtonPrimary>
+        <ButtonPrimary
+          type="button"
+          color="black"
+          onClick={onModify}
+          disabled={!isDirty || !isValid}
+        >
+          {currentItem.index !== undefined ? 'Update' : 'Add'}
+        </ButtonPrimary>
+      </div>
+    </div>
+  );
+};

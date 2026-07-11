@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+import { prisma } from '@repo/database';
 import { auth } from '@/auth';
 import { revalidatePath } from 'next/cache';
 import { CURRENCY_ERRORS } from '@/features/currency/constants';

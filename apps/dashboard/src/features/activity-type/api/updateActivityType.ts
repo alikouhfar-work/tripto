@@ -1,4 +1,4 @@
-import { ActivityTypeFormData } from '@/features/activity-type/types';
+import { ActivityTypeFormData } from '@/features/activity-type/types/activityType';
 import { ACTIVITY_TYPE_ERRORS } from '@/features/activity-type/constants';
 
 export const updateActivityType = async (id: string, data: ActivityTypeFormData) => {

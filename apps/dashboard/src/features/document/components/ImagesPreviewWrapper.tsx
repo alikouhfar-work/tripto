@@ -4,11 +4,9 @@ import { ImagePreview } from '@/features/document/components/ImagePreview';
 import { queryClient } from '@/lib/query-client';
 import clsx from 'clsx';
 import { FC } from 'react';
-import { DOCUMENT_QUERY_KEYS } from '../constants';
-import { useDeleteDocument } from '../hooks/useDeleteDocument';
-import { useGetDocuments } from '../hooks/useGetDocuments';
-import { ImagesPreviewWrapperProps } from '../types';
+import { ImagesPreviewWrapperProps } from '../types/document';
 import { ImagesPreviewWrapperSkeleton } from './ImagesPreviewWrapperSkeleton';
+import { DOCUMENT_QUERY_KEYS, useDeleteDocument, useGetDocuments } from '@repo/documents';
 
 export const ImagesPreviewWrapper: FC<ImagesPreviewWrapperProps> = (props) => {
   const { id, title, bucket, prefix, category = 'gallery', className, skeletonCount } = props;

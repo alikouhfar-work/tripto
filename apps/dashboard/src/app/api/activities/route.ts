@@ -1,11 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+import { prisma } from '@repo/database';
 import { auth } from '@/auth';
 import { revalidatePath } from 'next/cache';
 import { ACTIVITY_ERRORS } from '@/features/activity/constants';
-import { uploadDocument } from '@/features/document';
-import { BUCKETS } from '@/features/document/constants';
 import { parseActivityFormData } from '@/features/activity/utils/parseActivityFormData';
+import { uploadDocument } from '@repo/documents';
 
 export async function GET(request: NextRequest) {
   try {
@@ -122,7 +121,7 @@ export async function POST(request: NextRequest) {
 
     if (data.heroImage) {
       const uploadResult = await uploadDocument({
-        bucket: BUCKETS.activities,
+        bucket: 'activities',
         file: data.heroImage,
         object: `${activity.id}/hero.webp`,
       });

@@ -2,22 +2,25 @@
 
 import { Skeleton } from '@/components/ui/skeleton';
 import { ImagePreview } from '@/features/document/components/ImagePreview';
-import { queryClient } from '@/lib/query-client';
 import clsx from 'clsx';
 import { FC } from 'react';
-import { DOCUMENT_QUERY_KEYS, useDeleteDocument, useGetDocument } from '@repo/documents';
+import { useGetDocument } from '@repo/documents';
 import { ImagePreviewWrapperProps } from '@/features/document/types';
 
-export const ImagePreviewWrapper: FC<ImagePreviewWrapperProps> = (props) => {
-  const { id, title, bucket, object, className, category = 'hero' } = props;
+export const ImagePreviewWrapper: FC<ImagePreviewWrapperProps> = ({
+  id,
+  title,
+  bucket,
+  object,
+  className,
+  category = 'hero',
+}) => {
   const { data, isFetching } = useGetDocument({
     id,
     bucket,
     object,
     category,
   });
-
-  const deleteDocumentMutation = useDeleteDocument();
 
   if (isFetching) return <Skeleton className={clsx('rounded-lg', className || 'mb-10 size-24')} />;
 
@@ -26,18 +29,6 @@ export const ImagePreviewWrapper: FC<ImagePreviewWrapperProps> = (props) => {
       title={title}
       src={data?.url}
       className={clsx('rounded-lg', className || 'mb-10 size-24')}
-      onDelete={() => {
-        deleteDocumentMutation
-          .mutateAsync({
-            bucket,
-            object,
-          })
-          .then(() =>
-            queryClient.removeQueries({
-              queryKey: [...DOCUMENT_QUERY_KEYS.document({ id, bucket, category })],
-            }),
-          );
-      }}
     />
   );
 };

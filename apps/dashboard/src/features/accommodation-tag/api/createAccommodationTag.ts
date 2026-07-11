@@ -1,4 +1,4 @@
-import { AccommodationTagFormData } from '@/features/accommodation-tag/types';
+import { AccommodationTagFormData } from '@/features/accommodation-tag/types/accommodationTag';
 import { ACCOMMODATION_TAG_ERRORS } from '@/features/accommodation-tag/constants';
 
 export const createAccommodationTag = async (data: AccommodationTagFormData) => {

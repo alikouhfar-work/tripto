@@ -1,7 +1,7 @@
 import { Skeleton } from '@/components/ui/skeleton';
 import clsx from 'clsx';
 import { FC } from 'react';
-import { ImagesPreviewWrapperSkeletonProps } from '../types';
+import { ImagesPreviewWrapperSkeletonProps } from '../types/document';
 
 export const ImagesPreviewWrapperSkeleton: FC<ImagesPreviewWrapperSkeletonProps> = (props) => {
   const { count = 3, className } = props;

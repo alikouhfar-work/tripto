@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+import { prisma } from '@repo/database';
 import { AccommodationType } from '@/features/accommodation/types/accommodation';
 import { ACCOMMODATION_ERRORS } from '@/features/accommodation/constants';
 

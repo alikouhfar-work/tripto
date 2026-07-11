@@ -1,4 +1,4 @@
-import { DocumentBucket } from '@/features/document/types';
+import { DocumentBucket } from '@/features/document/types/document';
 import { QueryObserverResult, RefetchOptions, UseMutationResult } from '@tanstack/react-query';
 import { Column, ColumnDef, SortingState, Table } from '@tanstack/react-table';
 

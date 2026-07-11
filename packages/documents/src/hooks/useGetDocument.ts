@@ -1,13 +1,13 @@
+'use client'
+
 import { useQuery } from '@tanstack/react-query';
-import { getDocument } from '../api/queries';
-import { DOCUMENT_QUERY_KEYS } from '../constants';
 import { UseGetDocumentParams } from '../types';
+import { DOCUMENT_QUERY_KEYS } from '../constants';
+import { getDocument } from '../api/getDocument';
 
-export const useGetDocument = (params: UseGetDocumentParams) => {
-  const { id, bucket, category } = params;
-
+export const useGetDocument = ({ id, bucket, object, category }: UseGetDocumentParams) => {
   return useQuery({
     queryKey: [...DOCUMENT_QUERY_KEYS.document({ id, bucket, category })],
-    queryFn: () => getDocument(params),
+    queryFn: () => getDocument({ bucket, object }),
   });
 };

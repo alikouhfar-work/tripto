@@ -1,31 +1,19 @@
 import { ServerTableParams, ServerTableResponse } from '@/components/shared/DataTable/types';
 
-type FetchListOptions = {
+type FetchOptions = {
   endpoint: string;
-  baseUrl?: string;
   defaultError: string;
+  fetchFn?: (path: string) => Promise<Response>;
 };
 
-type FetchDropdownOptions = {
-  endpoint: string;
-  baseUrl?: string;
-  defaultError: string;
-};
-
-export const createDropdownFetcher = <T>({
-  endpoint,
-  defaultError,
-  baseUrl,
-}: FetchDropdownOptions) => {
+export const createDropdownFetcher = <T>({ endpoint, defaultError, fetchFn }: FetchOptions) => {
   return async (onlyActive: boolean = true): Promise<T[]> => {
     const searchParams = new URLSearchParams();
     searchParams.set('onlyActive', String(onlyActive));
 
-    const url = baseUrl
-      ? `${baseUrl}${endpoint}?${searchParams.toString()}`
-      : `${endpoint}?${searchParams.toString()}`;
+    const path = `${endpoint}?${searchParams.toString()}`;
 
-    const response = await fetch(url);
+    const response = fetchFn ? await fetchFn(path) : await fetch(path);
 
     if (!response.ok) {
       const error = await response.json();
@@ -36,7 +24,7 @@ export const createDropdownFetcher = <T>({
   };
 };
 
-export const createListFetcher = <T>({ endpoint, defaultError, baseUrl }: FetchListOptions) => {
+export const createListFetcher = <T>({ endpoint, defaultError, fetchFn }: FetchOptions) => {
   return async (params: ServerTableParams): Promise<ServerTableResponse<T>> => {
     const searchParams = new URLSearchParams();
     searchParams.set('page', params.page.toString());
@@ -48,11 +36,9 @@ export const createListFetcher = <T>({ endpoint, defaultError, baseUrl }: FetchL
       searchParams.set('sortOrder', params.sort[0].desc ? 'desc' : 'asc');
     }
 
-    const url = baseUrl
-      ? `${baseUrl}${endpoint}?${searchParams.toString()}`
-      : `${endpoint}?${searchParams.toString()}`;
+    const path = `${endpoint}?${searchParams.toString()}`;
 
-    const response = await fetch(url);
+    const response = fetchFn ? await fetchFn(path) : await fetch(path);
 
     if (!response.ok) {
       const error = await response.json();
@@ -63,11 +49,11 @@ export const createListFetcher = <T>({ endpoint, defaultError, baseUrl }: FetchL
   };
 };
 
-export const createSingleFetcher = <T>({ endpoint, defaultError, baseUrl }: FetchListOptions) => {
+export const createSingleFetcher = <T>({ endpoint, defaultError, fetchFn }: FetchOptions) => {
   return async (id: string): Promise<T> => {
-    const url = baseUrl ? `${baseUrl}${endpoint}/${id}` : `${endpoint}/${id}`;
+    const path = `${endpoint}/${id}`;
 
-    const response = await fetch(url);
+    const response = fetchFn ? await fetchFn(path) : await fetch(path);
 
     if (!response.ok) {
       const error = await response.json();

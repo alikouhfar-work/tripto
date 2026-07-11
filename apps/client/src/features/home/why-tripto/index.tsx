@@ -1,0 +1,1 @@
+export { WhyTripto } from './components/WhyTripto'

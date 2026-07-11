@@ -1,4 +1,4 @@
-import { Currency } from '@/features/currency/types';
+import { Currency } from '@/features/currency/types/currency';
 import { createSingleFetcher } from '@/utils/apiClient';
 import { serverFetch } from '@/utils/serverFetch';
 import { CURRENCY_ERRORS } from '@/features/currency/constants';

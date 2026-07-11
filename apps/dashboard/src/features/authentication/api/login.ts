@@ -1,9 +1,9 @@
 'use server';
 
-import { signIn, signOut } from '@/auth';
+import { signIn } from '@/auth';
 import { AuthError } from 'next-auth';
-import { AUTHENTICATION_ERRORS } from '../constants';
-import { LoginFormData } from '../types';
+import { LoginFormData } from '@/features/authentication/types/authentication';
+import { AUTHENTICATION_ERRORS } from '@/features/authentication/constants';
 
 export const login = async (data: LoginFormData) => {
   try {

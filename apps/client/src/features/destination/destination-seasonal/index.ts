@@ -1,0 +1,1 @@
+export { DestinationSeasonal } from './components/DestinationSeasonal'

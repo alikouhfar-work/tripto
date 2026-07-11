@@ -1,0 +1,1 @@
+export { DestinationWeekend } from './components/DestinationWeekend'

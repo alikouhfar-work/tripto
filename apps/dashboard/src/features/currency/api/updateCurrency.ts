@@ -1,3 +1,6 @@
+import { CURRENCY_ERRORS } from '@/features/currency/constants';
+import { CurrencyFormData } from '@/features/currency/types/currency';
+
 export const updateCurrency = async (id: string, data: CurrencyFormData) => {
   const response = await fetch(`/api/currencies/${id}`, {
     method: 'PUT',

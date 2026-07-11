@@ -1,5 +1,3 @@
-export * from './queries';
-
 export { ImagePreviewWrapper } from './components/ImagePreviewWrapper';
 
-export type { DeleteDocumentParams, GetDocumentParams } from './types';
+export type { DeleteDocumentParams, GetDocumentParams } from './types/document';

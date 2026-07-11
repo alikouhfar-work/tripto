@@ -1,87 +1,36 @@
-import { type ReactNode } from "react";
-
-export type DocumentCategory = "hero" | "gallery" | "roomGallery";
-export type DocumentBucket = "activities" | "accommodations";
-
-export type UseGetDocumentParams = GetDocumentParams & { id: string };
-export type UseGetDocumentsParams = GetDocumentsParams & { id: string };
-
-export type DocumentQueryKeysParams = {
-  id?: string;
-  bucket: DocumentBucket;
-  category: DocumentCategory;
-};
-
-export type GetDocumentParams = {
-  object: string;
-  bucket: DocumentBucket;
-  category: DocumentCategory;
-};
-
-export type GetDocumentsParams = {
-  prefix: string;
-  bucket: DocumentBucket;
-  category: DocumentCategory;
-};
-
-export type GetDocumentResponse = {
-  url?: string;
-  isSuccess: boolean;
-};
-
-export type GetDocumentsResponse = {
-  urls?: Array<string>;
-  isSuccess: boolean;
-};
-
-export type DeleteDocumentParams = {
-  bucket: string;
-  object: string;
-};
-
-export type UploadDocumentParams = {
+export type UploadObjectParams = {
   bucket: string;
   object: string;
   file: File;
 };
 
-export type GetActivityHeroImageParams = {
-  id?: string;
-  onSuccess?: (url: string | null) => void;
-};
-
-export type ImagePreviewProps = {
-  src: string;
-  alt?: string;
-  className?: string;
-  renderImage: (props: {
-    src: string;
-    alt: string;
-    onError: () => void;
-  }) => ReactNode;
-  actions?: ReactNode;
-};
-
-export type ImagePreviewWrapperProps = {
-  id: string;
-  title: string;
+export type DeleteObjectParams = {
+  bucket: string;
   object: string;
-  className?: string;
-  bucket: DocumentBucket;
-  category?: DocumentCategory;
 };
 
-export type ImagesPreviewWrapperProps = {
-  id: string;
-  title: string;
+export type GetObjectUrlParams = {
+  bucket: string;
+  object: string;
+};
+
+export type GetObjectUrlsParams = {
   prefix: string;
-  className?: string;
-  skeletonCount?: number;
-  bucket: DocumentBucket;
-  category?: DocumentCategory;
+  bucket: string;
 };
 
-export type ImagesPreviewWrapperSkeletonProps = {
-  count?: number;
-  className?: string;
+export type ListObjectsParams = {
+  bucket: string;
+  prefix: string;
 };
+
+export interface StorageProvider {
+  upload(params: UploadObjectParams): Promise<void>;
+
+  delete(params: DeleteObjectParams): Promise<void>;
+
+  getUrl(params: GetObjectUrlParams): Promise<string | null>;
+  getUrls(params: GetObjectUrlsParams): Promise<string[]>;
+
+  list(params: ListObjectsParams): Promise<string[]>;
+}

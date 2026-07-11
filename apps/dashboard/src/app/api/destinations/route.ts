@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
 import { auth } from '@/auth';
 import { DESTINATION_ERRORS } from '@/features/destination/constants';
 import { revalidatePath } from 'next/cache';
+import { prisma } from '@repo/database';
 
 export async function GET(request: NextRequest) {
   try {

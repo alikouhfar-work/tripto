@@ -1,4 +1,4 @@
-import { Destination } from '@/features/destination/types';
+import { Destination } from '@/features/destination/types/destination';
 import { DESTINATION_ERRORS } from '@/features/destination/constants';
 import { createSingleFetcher } from '@/utils/apiClient';
 import { serverFetch } from '@/utils/serverFetch';
