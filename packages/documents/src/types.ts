@@ -8,6 +8,10 @@ export type DocumentQueryKeysParams = {
   id?: string;
   bucket: DocumentBucket;
   category: DocumentCategory;
+  /** Single-object key (useGetDocument). Part of the cache key. */
+  object?: string;
+  /** Prefix key (useGetDocuments). Part of the cache key. */
+  prefix?: string;
 };
 
 export type GetDocumentParams = {

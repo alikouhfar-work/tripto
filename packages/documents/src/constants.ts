@@ -8,6 +8,7 @@ export const DOCUMENT_QUERY_KEYS = {
       params.bucket,
       params.category,
       params.id,
+      params.object ?? null,
     ] as const,
   documents: (params: DocumentQueryKeysParams) =>
     [
@@ -15,6 +16,7 @@ export const DOCUMENT_QUERY_KEYS = {
       params.bucket,
       params.category,
       params.id,
+      params.prefix ?? null,
     ] as const,
 };
 

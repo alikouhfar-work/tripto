@@ -17,7 +17,9 @@ export const minioProvider: StorageProvider = {
 
   async getUrl({ bucket, object }) {
     try {
-      return await minioClient.presignedGetObject(bucket, object);
+      // Explicit 1h expiry (matches S3) — never rely on the 7-day SDK default
+      // for bearer URLs that end up in browser history and logs.
+      return await minioClient.presignedGetObject(bucket, object, 60 * 60);
     } catch {
       return null;
     }
@@ -40,7 +42,7 @@ export const minioProvider: StorageProvider = {
 
       return await Promise.all(
         objects.map(async (object) =>
-          minioClient.presignedGetObject(bucket, object),
+          minioClient.presignedGetObject(bucket, object, 60 * 60),
         ),
       );
     } catch {

@@ -1,6 +1,10 @@
 {
   "name": "@repo/documents",
   "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit"
+  },
   "peerDependencies": {
     "@repo/storage": "workspace:*",
     "@tanstack/react-query": "^5",
@@ -8,12 +12,17 @@
     "react-hot-toast": "^2.6.0"
   },
   "devDependencies": {
-    "@types/node": "^26.1.1",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@tanstack/react-query": "^5.101.2",
+    "@types/node": "^26.1.1",
     "@types/react": "^19.2.17",
+    "eslint": "^9.28.0",
     "react": "19.2.7"
   },
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./server": "./src/server.ts",
+    "./client": "./src/client.ts"
   }
 }

@@ -5,12 +5,14 @@ node_modules
 .pnp
 .pnp.js
 
-# Local env files
+# Local env files (keep examples tracked)
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+!.env.example
+!**/.env.example
 
 # Testing
 coverage
@@ -37,3 +39,13 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+# IDEs
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# pnpm
+pnpm-debug.log*

@@ -12,7 +12,9 @@ export const useGetDocuments = ({
   category,
 }: UseGetDocumentsParams) => {
   return useQuery({
-    queryKey: [...DOCUMENT_QUERY_KEYS.documents({ id, bucket, category })],
+    queryKey: [...DOCUMENT_QUERY_KEYS.documents({ id, bucket, category, prefix })],
     queryFn: () => getDocuments({ bucket, prefix }),
+    // Don't fire storage calls for empty prefixes (first render placeholders).
+    enabled: !!bucket && !!prefix,
   });
 };

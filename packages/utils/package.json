@@ -1,0 +1,34 @@
+{
+  "name": "@repo/utils",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.6.0"
+  },
+  "peerDependencies": {
+    "@tabler/icons-react": "^3.44.0",
+    "react": "^19.2.7"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@tabler/icons-react": "^3.44.0",
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "clsx": "^2.1.1",
+    "eslint": "^9.28.0",
+    "react": "19.2.7",
+    "tailwind-merge": "^3.6.0",
+    "typescript": "^5.9.3"
+  }
+}
